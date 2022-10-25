@@ -1,4 +1,5 @@
 import express from 'express'
+import { register } from '../controllers/authController.js'
 
 const authRoute = express.Router()
 
@@ -6,8 +7,10 @@ authRoute.get('/', function (req, res) {
   res.send('Endpoint')
 })
 
-authRoute.get('/register', function (req, res) {
-  res.send('Register')
-})
+// register
+authRoute.post('/register', register)
+
+// login
+authRoute.post('/login', login)
 
 export default authRoute
