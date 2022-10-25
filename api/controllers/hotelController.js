@@ -1,4 +1,5 @@
 import Hotel from '../models/hotelModel.js'
+import { createError } from '../utils/error.js'
 
 export const createHotel = async (req, res, next) => {
   const newHotel = new Hotel(req.body)
@@ -44,7 +45,7 @@ export const getSingleHotel = async (req, res, next) => {
 }
 
 export const getAllHotel = async (req, res, next) => {
-  const failed = true
+  const failed = false
   if (failed) return next(createError(401, 'Bạn không có quyền truy cập!'))
   try {
     const hotels = await Hotel.find()

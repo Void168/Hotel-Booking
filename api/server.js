@@ -1,7 +1,11 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
-import authRoute from './routes/auth.js'
+import authRoute from './routes/authRoute.js'
+import userRoute from './routes/userRoute.js'
+import hotelRoute from './routes/hotelRoute.js'
+import roomRoute from './routes/roomRoute.js'
+import cookieParser from 'cookie-parser'
 
 const app = express()
 dotenv.config()
@@ -28,12 +32,13 @@ app.get('/', (req, res) => {
 })
 
 // middlewares
+app.use(cookieParser())
 app.use(express.json())
 
 app.use('/auth', authRoute)
-app.use('/auth', hotelRoute)
-app.use('/auth', userRoute)
-app.use('/auth', roomRoute)
+app.use('/hotel', hotelRoute)
+app.use('/user', userRoute)
+app.use('/room', roomRoute)
 
 app.listen(8800, () => {
   connect()

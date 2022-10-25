@@ -5,24 +5,25 @@ import {
   getAllHotel,
   getSingleHotel,
   updateHotel,
-} from '../controllers/hotelController'
+} from '../controllers/hotelController.js'
+import { verifyAdmin } from '../utils/verifyToken.js'
 
 const hotelRoute = express.Router()
 
 // create hotel
-route.post('/', createHotel)
+hotelRoute.post('/', verifyAdmin, createHotel)
 
 // update hotel
 
-route.put('/:id', updateHotel)
+hotelRoute.put('/:id', verifyAdmin, updateHotel)
 
 // delete
-route.delete('/:id', deleteHotel)
+hotelRoute.delete('/:id', verifyAdmin, deleteHotel)
 
 // get single hotel
-route.get('/:id', getSingleHotel)
+hotelRoute.get('/:id', getSingleHotel)
 
 // get all hotels
-route.get('/', getAllHotel)
+hotelRoute.get('/', getAllHotel)
 
 export default hotelRoute
