@@ -1,10 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className="bg-light-blue p-4">
       <div className="flex-row flex justify-between px-4 text-light-lime">
-        <span className="block">Hotel Booking</span>
+        <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <span className="logo">Hotel Booking</span>
+        </Link>
+
         <div>
           <button>Đăng ký</button>
           <button>Đăng nhập</button>
