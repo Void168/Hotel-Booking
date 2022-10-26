@@ -1,11 +1,13 @@
+import React from 'react'
+
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <div className="navContainer">
-        <span className="logo">Hotel Booking</span>
-        <div className="navItems">
-          <button className="navButton">Đăng ký</button>
-          <button className="navButton">Đăng nhập</button>
+    <div className="bg-light-blue p-4">
+      <div className="flex-row flex justify-between px-4 text-light-lime">
+        <span className="block">Hotel Booking</span>
+        <div>
+          <button>Đăng ký</button>
+          <button>Đăng nhập</button>
         </div>
       </div>
     </div>

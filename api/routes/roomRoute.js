@@ -5,7 +5,7 @@ import {
   getAllRoom,
   getSingleRoom,
   updateRoom,
-} from '../controllers/roomController'
+} from '../controllers/roomController.js'
 import { verifyAdmin } from '../utils/verifyToken.js'
 
 const roomRoute = express.Router()

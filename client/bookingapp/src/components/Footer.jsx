@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="fLists">
+    <footer className="mt-4 font-semibold">
+      <div className="flex justify-evenly">
         <ul className="fList">
           <li className="fListItem">Countries</li>
           <li className="fListItem">Regions</li>
@@ -42,8 +42,8 @@ const Footer = () => {
           <li className="fListItem">Terms & conditions</li>
         </ul>
       </div>
-      <div className="fText">Copyright © 2022 Lamabooking.</div>
-    </div>
+      <div className="text-center">Copyright © 2022 Hotel Booking.</div>
+    </footer>
   )
 }
 

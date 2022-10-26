@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
-import userRoute from '../routes/userRoute'
-import { createError } from './error'
+import userRoute from '../routes/userRoute.js'
+import { createError } from './error.js'
 
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.access_token

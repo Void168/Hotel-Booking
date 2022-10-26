@@ -11,12 +11,12 @@ const HomeScreen = () => {
     <div>
       <Navbar />
       <Header />
-      <div className="homeContainer">
+      <div className="m-8">
         <Featured />
-        <h1 className="homeTitle">Browse by property type</h1>
         <PropList />
-        <h1 className="homeTitle">Homes guests love</h1>
         <FeaturedProps />
+      </div>
+      <div>
         <MailList />
         <Footer />
       </div>

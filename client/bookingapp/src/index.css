@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button {
+    @apply px-4 py-2 bg-dark-light-yellow mx-2 shadow-md font-medium rounded-2xl;
+  }
+
+  img {
+    @apply rounded-lg;
+  }
+
+  .pListImg {
+    @apply w-72 h-48 shadow-lg;
+  }
+
+  .pListTitles h1 {
+    @apply font-bold text-2xl;
+  }
+}
