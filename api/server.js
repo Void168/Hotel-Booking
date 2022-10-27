@@ -37,10 +37,10 @@ app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
 
-app.use('/auth', authRoute)
-app.use('/hotel', hotelRoute)
-app.use('/user', userRoute)
-app.use('/room', roomRoute)
+app.use('/api/auth', authRoute)
+app.use('/api/hotels', hotelRoute)
+app.use('/api/users', userRoute)
+app.use('/api/rooms', roomRoute)
 
 app.listen(8800, () => {
   connect()

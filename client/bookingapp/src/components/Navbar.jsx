@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className="bg-light-blue p-4">
+    <div className="p-4">
       <div className="flex-row flex justify-between px-4 text-light-lime">
         <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
           <span className="logo">Hotel Booking</span>

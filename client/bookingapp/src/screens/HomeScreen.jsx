@@ -5,13 +5,15 @@ import Header from '../components/Header'
 import MailList from '../components/MailList'
 import Navbar from '../components/Navbar'
 import PropList from '../components/PropList'
+import SearchBar from '../components/SearchBar'
 
 const HomeScreen = () => {
   return (
     <div>
-      <Navbar />
       <Header />
-      <div className="m-8">
+
+      <div className="mt-16 mx-8">
+        <SearchBar />
         <Featured />
         <PropList />
         <FeaturedProps />

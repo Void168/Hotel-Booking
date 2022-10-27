@@ -1,7 +1,7 @@
 import useFetch from '../hooks/useFetch'
 
 const Featured = () => {
-  const { data, loading, error } = useFetch
+  const { data, loading, error } = useFetch()
   return (
     <div className="flex flex-row justify-evenly flex-wrap px-10 my-4">
       {loading ? (
